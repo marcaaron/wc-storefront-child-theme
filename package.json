@@ -1,0 +1,16 @@
+{
+  "name": "wc-storefront-child-theme",
+  "version": "1.0.0",
+  "description": "A StoreFront Child Theme for WooThemes StoreFront WooCommerce theme.",
+  "main": "index.js",
+  "scripts": {
+    "start": "sass --watch ./assets/sass/style.scss:style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marcaaron/wc-storefront-child-theme.git"
+  },
+  "author": "Marc Glasser",
+  "license": "ISC",
+  "homepage": "marcaaron/wc-storefront-child-theme"
+}

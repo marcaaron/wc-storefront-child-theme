@@ -1,0 +1,127 @@
+@import 'variables';
+
+@mixin inner-margins($width){
+  margin-left:$width;
+  margin-right:$width;
+  &:nth-of-type(1){
+    margin: 0;
+  }
+  &:last-of-type{
+    margin:0;
+  }
+}
+
+// Products
+.woocommerce-products-header {
+  &__title {
+    display: inline-block;
+    text-transform: uppercase;
+    font-weight: lighter;
+    &:after{
+      display: block;
+      content: '';
+      height: 2px;
+      background-color: $black;
+      width: 100%;
+    }
+  }
+}
+
+// Products List
+.products {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat( auto-fit, minmax(250px, 1fr));
+  li {
+    display: flex;
+    flex-direction: column;
+    position:relative;
+    .add_to_cart_button {
+      position: absolute;
+      padding: 10px;
+      bottom: 0;
+      width: 100%;
+      background-color: black;
+      color: white;
+      box-sizing: border-box;
+      text-align: center;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: background-color 0.3s;
+      &:hover {
+        background-color: $hover-black;
+      }
+    }
+    a.woocommerce-loop-product__link {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      .woocommerce-loop-product__title {
+        order: 1;
+        margin:0;
+        padding-bottom: 5px;
+      }
+      &:before {
+        content: 'LEARN MORE';
+        position: absolute;
+        width: 200px;
+        text-align: center;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        z-index: 8888;
+        font-size: 20px;
+        font-weight: bolder;
+        color:white;
+        opacity: 0;
+        transition: opacity 0.5s;
+        text-shadow: 2px 2px 8px black;
+      }
+
+      &:hover {
+        .onsale {
+          transform: rotate(20deg) translate(-10px, 20px) scale(1.2, 1.2);
+        }
+        img {
+          opacity: 0.7;
+        }
+        &:before {
+          opacity: 1;
+        }
+      }
+      .onsale {
+        display: inline-block;
+        width: 50px;
+        text-align: center;
+        color:white;
+        border: none;
+        font-weight: 700;
+        letter-spacing: 1.5px;
+        order: 2;
+        position: absolute;
+        right: 0;
+        top:0;
+        text-transform: uppercase;
+        padding: 15px;
+        z-index: 9;
+        background-color: $purple;
+        transform: rotate(0) translate(0, 0);
+        transition: transform 0.2s;
+        box-shadow: 1px 1px 2px 1px $black;
+      }
+      .price {
+        order: 3;
+        padding-bottom: 5px;
+      }
+      img {
+        order: 4;
+        width: 100%;
+        height: auto;
+        transition: opacity 0.4s;
+      }
+    }
+  }
+}

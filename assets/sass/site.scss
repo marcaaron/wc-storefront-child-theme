@@ -1,0 +1,27 @@
+@import 'variables';
+
+.site {
+  display:flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
+  max-width: 900px;
+
+  background-color: white;
+  margin: 0 auto;
+  .site-header {
+    box-sizing: border-box;
+  }
+  .site-content {
+    flex:1;
+    box-sizing: border-box;
+  }
+  .site-footer {
+    background: black;
+    color: white;
+    padding: 20px;
+    box-sizing: border-box;
+    margin-top: 20px;
+  }
+}

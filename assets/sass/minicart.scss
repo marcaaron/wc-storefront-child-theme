@@ -1,0 +1,104 @@
+@import 'variables';
+
+// Mini-Cart
+.site-header-cart {
+  list-style: none;
+  margin: 0;
+  padding-top: 5px;
+  display: flex;
+  flex-direction: column;
+  min-width: 300px;
+  padding-left: 0;
+  @media screen and (max-width: 733px){
+    min-width: 0;
+    width: 100%;
+    padding: 20px;
+    a.cart-contents{
+      justify-content: space-around;
+      padding-left: 0;
+    }
+  }
+  li {
+    margin: 0;
+  }
+  // Cart Icon
+  .cart-contents{
+    padding-left: 20px;
+    display: flex;
+    justify-content: space-between;
+    &:after{
+      display: none;
+      content: '\f07a';
+    }
+  }
+  .woocommerce-mini-cart__empty-message {
+    padding-top: 5px;
+  }
+  &:hover {
+    .widget_shopping_cart_content {
+      display: block;
+      opacity: 1;
+      pointer-events: all;
+      transform: scale(1,1);
+    }
+  }
+  .widget_shopping_cart {
+    &_content {
+      z-index: 99999;
+      position: absolute;
+      pointer-events: none;
+      opacity: 0;
+      transform: scale(0,0);
+      transition: opacity 0.3s, transform 0.1s;
+      background-color: rgba(255,255,255,0.9);
+      padding:20px;
+      box-shadow: 0 2px 2px -1px black;
+      min-width: 260px;
+    }
+  }
+}
+
+.woocommerce-mini-cart {
+  padding: 0;
+  &__buttons {
+    display: flex;
+    a.button {
+      margin: 5px 5px 0 0;
+      display: inline-block;
+      padding: 10px;
+      background-color: black;
+      color: white;
+    }
+  }
+  &__total {
+    padding: 5px 0;
+    text-align: right;
+  }
+  &-item {
+    display: flex;
+    align-items: center;
+    background-color: white !important;
+    justify-content: space-between;
+    .remove_from_cart_button {
+      &:hover {
+        &:before{
+          color:white;
+          background-color: black;
+        }
+      }
+      &:before {
+        clip-path: circle(10px at center);
+        transition: color 0.2s, background-color 0.2s;
+        color: black;
+      }
+    }
+    img {
+      display: none;
+    }
+  }
+}
+
+// Prevent jQuery BlockUI from creating black overlay
+.woocommerce .blockUI.blockOverlay {
+  background-color: white !important;
+}

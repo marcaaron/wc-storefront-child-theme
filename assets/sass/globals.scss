@@ -1,0 +1,45 @@
+@import 'variables';
+
+body {
+  margin:0;
+  font-family: Roboto, sans-serif;
+  background-color: $black;
+  min-width:320px;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  transition: color 0.3s;
+  &:visited {
+    color: black;
+  }
+  &:link {
+    color: black;
+  }
+}
+
+.screen-reader-text {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute !important;
+  width: 1px;
+  word-wrap: normal !important;
+}
+
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance:textfield;
+}

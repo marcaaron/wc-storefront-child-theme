@@ -1,0 +1,19 @@
+.storefront-handheld-footer-bar ul li a::before {
+  display: none;
+}
+
+.widget_search form::before, .widget_product_search form::before {
+  display: none;
+}
+
+.storefront-handheld-footer-bar {
+  display: none;
+}
+
+.storefront-breadcrumb {
+  display: none;
+}
+
+.storefront-sorting {
+  display: none;
+}

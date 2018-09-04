@@ -1,0 +1,31 @@
+@import 'variables';
+
+@mixin crazy-line($speed, $height){
+  &:after {
+    display: block;
+    content: '';
+    height: $height;
+    width: 0%;
+    opacity: 0;
+    transform: translateX(100%);
+    background-color: rgb(182, 94, 230);
+    margin-top: 3px;
+    transition: width $speed, transform $speed, opacity $speed;
+  }
+  &:hover {
+    &:after {
+      width: 100%;
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+}
+
+@mixin button-style {
+  font-size: 1.2em;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 5px;
+  margin-top:10px;
+  background: $light-purple;
+}
