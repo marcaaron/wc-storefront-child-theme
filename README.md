@@ -1,6 +1,6 @@
 # Custom Storefront Child Theme Example
 
-This is a child theme for WooCommerce site using the Storefront parent theme. This is a work in progress. But you can still download and install if you're curious to see where I'm at with it. The theme has been significantly edited with PHP function overwrites, PHP plugin template edits, and major CSS overhaul. It does not use any of the original CSS from the WooThemes Storefront parent theme, but does use the classes left by the author's of that theme.
+This is a child theme for WooCommerce site using the Storefront parent theme. This is a **work in progress** and is not yet suitable for production. But you can still download and install if you're curious to see where I'm at with it. The theme has been significantly edited with PHP function overwrites, PHP plugin template edits, and major CSS overhaul. It *does not use any* of the original CSS from the WooThemes Storefront parent theme, but does use the classes left by the authors of that theme.
 
 ![ScreenShot of Theme](https://raw.githubusercontent.com/marcaaron/wc-storefront-child-theme/master/screenshot.png)
 
